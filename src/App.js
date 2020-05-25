@@ -1,23 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/btn.png';
 import './App.css';
 
 function App() {
+  const handleClick = (e) => {
+    const target = e.target
+    const container = document.querySelector('.container')
+
+    console.log(target)
+    target.classList.add('click-rotate')
+    container.classList.add('click-move')
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className='container'>
+          <img src={logo} className="App-logo" alt="logo" onClick={handleClick} />
+        </div>
+       
       </header>
     </div>
   );

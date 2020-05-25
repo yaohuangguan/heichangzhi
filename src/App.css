@@ -4,17 +4,22 @@
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: scale infinite 2s linear;
   }
 }
-
+.click-move {
+  animation: move 2s ease-in-out forwards
+}
+.click-rotate {
+  animation :chenfangting infinite 1.5s ease-in-out;
+}
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,12 +32,32 @@
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
+@keyframes chenfangting {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes move {
+  from {
+  }
+  to {
+    transform: translateX(100vh);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  70% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.15);
   }
 }
