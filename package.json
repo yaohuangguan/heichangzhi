@@ -13,8 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "push":"git add . && git commit -m 'regular push' && git push origin master && react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"

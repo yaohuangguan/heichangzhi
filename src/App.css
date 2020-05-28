@@ -23,7 +23,7 @@
   animation: moveReverse 2s ease-in-out 1.5s forwards;
 }
 .App-header {
-  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1);
+  /* box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1); */
   background-image: url(./assets/116764-OP0TEF-835.jpg);
   background-size: 100%;
   background-attachment: scroll;
