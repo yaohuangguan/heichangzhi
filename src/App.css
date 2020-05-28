@@ -5,6 +5,7 @@
 .App-logo {
   height: 40vmin;
   cursor: pointer;
+  z-index: 10;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,13 +14,21 @@
   }
 }
 .click-move {
-  animation: move 2s ease-in-out forwards
+  animation: move 2s ease-in-out forwards;
 }
 .click-rotate {
-  animation :chenfangting infinite 1.5s ease-in-out;
+  animation: chenfangting infinite 1.5s ease-in-out;
+}
+.click-move-reverse {
+  animation: moveReverse 2s ease-in-out 1.5s forwards;
 }
 .App-header {
-  background-color: #ffffff;
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1);
+  background-image: url(./assets/116764-OP0TEF-835.jpg);
+  background-size: 100%;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,8 +36,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: -10;
 }
-
+.white-template {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 .App-link {
   color: #61dafb;
 }
@@ -44,7 +62,14 @@
   from {
   }
   to {
-    transform: translateX(100vh);
+    transform: translateX(120vw);
+  }
+}
+@keyframes moveReverse {
+  from {
+  }
+  to {
+    transform: translateX(-120vw);
   }
 }
 @keyframes scale {
