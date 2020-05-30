@@ -7,7 +7,31 @@
   cursor: pointer;
   z-index: 10;
 }
-
+.white-background {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid white;
+  color: #333;
+  width: 90vw;
+  height: 90vh;
+  position: absolute;
+  top: 5vh;
+  margin: auto auto;
+  border-radius: 50px;
+  display: none;
+  transition: all 2s ease-in-out;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.white-background::-webkit-scrollbar {
+  display: none;
+}
+.text-section{
+  padding: 20px;
+  line-height: 35px;
+  width: 50%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: scale infinite 2s linear;
@@ -22,6 +46,7 @@
 .click-move-reverse {
   animation: moveReverse 2s ease-in-out 1.5s forwards;
 }
+
 .App-header {
   /* box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1); */
   background-image: url(./assets/116764-OP0TEF-835.jpg);
@@ -36,7 +61,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  z-index: -10;
+  z-index: -100;
   overflow: hidden;
 }
 .white-template {
@@ -60,11 +85,10 @@
   }
 }
 @keyframes move {
-  
   50% {
     transform: translateX(120vw);
   }
-  100%{
+  100% {
     transform: scale(0);
   }
 }
